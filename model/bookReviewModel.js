@@ -1,26 +1,22 @@
 const mongoose = require("mongoose");
 
 const bookSchema = new mongoose.Schema({
-  title: {
+  bookID: {
     type: String,
     required: true,
     unique: true,
   },
-  description: {
+  review: {
     type: String,
     required: true,
     
   },
-  auther: {
+  rating: {
     type: String,
     required: true,
     
   },
-  genre: {
-    type: [String],
-    enum: ["Action", "Horror","Mystry","Fantasy","Romance"],
-    
-  },
+
 },{timestamps:true});
 
 
